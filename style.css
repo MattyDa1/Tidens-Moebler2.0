@@ -1,0 +1,1208 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Karla&display=swap');
+    
+/*Generelt*/
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;  
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding-top: 93px;
+    width: 100%;
+}
+
+/*Navigationsbar*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+nav {
+    background-color: white;
+    min-height: 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 35px;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 600;
+    color: black;
+    width: 250px;
+}
+
+.nav_streg {
+    margin: 0px -20px 0px 0px;
+    height: 100%;
+    width: 32px;
+}
+
+.nav_link {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+
+.nav_link:hover {
+    color: gray;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.nav_width {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.language_div{
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.language {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.slash {
+    font-size: 16px;
+    font-family: 'Bodoni Moda', serif;
+    line-height: 1.5rem;
+}
+
+.language:hover {
+    color: gray;
+}
+
+/*Forsiden*/
+#myVideo {
+    position: static;
+    width: 100%; 
+    min-height: 100%;
+    margin-bottom: 120px;
+}
+
+.slides {
+    display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  align-items: center;
+}
+
+.f_slides {
+    width: 100%;
+    height: 500px;
+    vertical-align: middle;
+}
+
+.dots {
+    text-align:center;
+    margin-bottom: 120px;
+}
+
+.prik {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.prik.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.f_instagram {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 350px;
+}
+
+.f_bot, .f_top {
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-media {
+    max-height: 850px;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*Produkter*/
+.produkter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 581px;
+    margin-top: 80px;
+}
+
+.produkter_img {
+    width: auto;
+    height: 500px;
+}
+
+.card {
+    margin: 0px auto;
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-back {
+    background-image: linear-gradient(to top right, #DEC3BC, #DFF5FF);  
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 60px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/*Lamper & Møbler*/
+.toplinks {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 40px;
+}
+
+.toptxt {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.topoverskift {
+    font-size: 40px;
+    font-family: 'Bodoni Moda', serif;
+    color: black;
+    font-weight: 600;
+    margin: 40px 200px;
+}
+
+.produkter_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+.txtdec {
+    text-decoration: none;
+}
+
+.grid_imgs {
+    height: 450px;
+    width: auto;
+    display: block;
+    margin: 0px auto;
+}
+
+.prod_txt {
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Bodoni Moda', serif;
+    color: black;
+    font-weight: 500;
+    margin: 40px 0px;
+}
+
+.b_line {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/*Produktet*/
+.p_overall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 657px;
+}
+
+.p_left {
+    width: 50%;
+    margin: 0px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p_slides {
+  display: none;
+  margin-top: 20px;
+}
+
+.produktet_top_img {
+    width: 500px;
+    height: 500px;
+}
+
+.p_billeder {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin: 20px 0px;
+}
+
+.column1 {
+  float: left;
+  width: 110px;
+  height: auto;
+}
+
+.produktet_bot_img {
+    opacity: 0.6;
+    cursor: pointer;
+    width: 110px;
+    max-height: 120px;
+}
+
+.active,
+.produktet_bot_img:hover {
+  opacity: 1;
+}
+
+.Prod_navn {
+    color: black;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 50px;
+    margin-top: 25px;
+    font-weight: 600;
+    margin: 40px 20px;
+}
+
+.p_right {
+    width: 50%;
+    margin: 0px 25px;
+}
+
+.p_header {
+    padding: 10px 20px;
+}
+
+.p_text {
+    width: 570px;
+}
+
+.p_question {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    border: black 1px solid;
+    margin-top: 50px;
+    padding: 10px;
+    margin-left: 20px;
+    background-image: linear-gradient(to top right, #DEC3BC, #DFF5FF);
+    cursor: pointer;
+}
+
+.p_answer {
+    width: 50%;
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    margin: -10px 0px 0px 30px;
+}
+
+.weight {
+    font-weight: 600;
+}
+
+/*hvem er vi*/
+.h_m {
+    color: black;
+    text-align: center;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h_vmv {
+    text-align:center;
+    color: black;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 25px;
+    line-height: 2rem;
+    margin: 15px 0px;
+}
+
+.h_bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h_stue {
+    background-image: url("img/stue.webp");
+}
+
+.h_setup {
+    background-image: url("img/setup_møbler.webp");
+}
+
+
+.h_designersofa {
+    background-image: url("img/designersofa.webp");
+}
+
+.h_bordogreol {
+    background-image: url("img/reologbord.webp");
+}
+
+.h_stole {
+    background-image: url("img/stole.webp");
+}
+
+.h_designersofa, .h_stole, .h_bordogreol, .h_stue, .h_setup {
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.h_a{
+    font-family: 'Karla', sans-serif;
+    color: black;
+    font-size: 17px;
+    line-height: 1.75rem;
+    width: 80%;
+    justify-content: center;
+}
+
+.h_kim, .h_morten {
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height: 425px;
+    margin: 0px 5%;
+}
+
+.h_km{
+    width: 200px;
+    height: auto;
+}
+
+.h_1{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h_v{
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 34px;
+    color: black;
+    padding: 50px;
+}
+
+.h_kim:hover, .h_morten:hover {
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.h_container {
+    padding: 8px 16px;
+}
+
+.h_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 35px 0px 70px;
+    width: 100%;
+}
+
+.h_n{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 26px;
+    color: black;
+    line-height: 2rem;
+}
+
+.h_p{
+    font-style: italic;
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+    color: black;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+/*Kontakt*/
+.main_kontakt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.gmaps_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 500px;
+    padding: 100px;
+}
+
+.googlemaps {
+    width: 600px;
+    height: 450px;
+    border: 0px;
+}
+
+.nyhed {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.nyhed_txt {
+    margin-right: 10px;
+}
+
+#fname {
+    width: 190px;
+}
+
+.nyhedsbrev {
+    height: 25px;
+}
+
+.kontakt_info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    color: black;
+    margin-left: 35px;
+}
+
+.margin_tb {
+    margin: 20px 0px;
+}
+
+.bold {
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.k_txt {
+    line-height: 2rem;
+    font-size: 17px;
+}
+
+.kontakt_tekst {
+    line-height: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.kontakt_tekst:hover {
+    color: blue;
+}
+
+.k_greviews {
+    height: 150px;
+    width: auto;
+}
+
+/*FAQ*/
+.faq {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 707px;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    border: black 1px solid;
+    margin-top: 50px;
+    padding: 10px;
+    background-image: linear-gradient(to top right, #DEC3BC, #DFF5FF);  
+    cursor: pointer;
+}
+
+.questtxt {
+    width: 100%;
+    font-size: 26px;
+    font-family: 'Bodoni Moda', serif;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.faq_pil {
+    height: 20px;
+    width: 34.29px;
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+
+.answer {
+    width: 50%;
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#svar1, #svar2, #svar3, #svar4, #svar5 {
+    display: none;
+}
+
+.answtxt {
+    font-size: 17px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    line-height: 1.5rem;
+}
+
+/*404 Error*/
+.fejlside {
+    width: 100%;
+    height: 607px;
+}
+
+.fejlbillede {
+    width: auto;
+    max-height: 607px;
+    display: block;
+    margin: 100px auto;
+}
+
+/*Footer*/
+footer {
+    list-style: none;
+    background: rgb(63,76,80);
+    background: linear-gradient(0deg, rgba(63,76,80,1) 0%, rgba(255,255,255,1) 100%);
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 0px 10px;
+    margin-top: 50px;
+}
+
+.footer_head {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+    margin: 20px 50px;
+}
+
+.bredde {
+    width: 60%;
+}
+
+.right {
+    margin-left: 100px;
+}
+
+.left {
+    margin-right: 100px;
+}
+
+.footer_content {
+    color: black;
+}
+
+.some {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer_icon {
+    width: 44px;
+    height: 44px;
+    margin: 0px 15px;
+}
+
+.footer_links {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+a.light:hover {
+    color: #dff5ff;
+}
+
+a.dark:hover {
+    color: blue;
+}
+
+.margin10 {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:1100px) {
+    /*Footer bar*/
+    .right {
+        margin-left: 25px;
+    }
+    
+    .left {
+        margin-right: 25px;
+    }    
+}
+
+@media(max-width:900px) {
+    /*Generelt*/
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Navigations bar*/
+    nav {
+        width: 101%;
+        overflow-x: hidden;
+    }
+
+    .logo {
+        font-size: 22px;
+        width: 140px;
+    }
+
+    .nav_width {
+        width: 10%;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 80px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_streg {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        gap: 15px;
+        flex-direction: column;
+        background-color: white;
+        width: 101%;
+        text-align: center;
+        transition: 0.3s;
+        overflow-x: hidden;
+        line-height: 2rem;
+    }
+
+    .nav_item {
+        margin: 16px 0px;
+    }
+
+    .nav_menu.active {
+        top: 65px;
+        left: 0px;
+    }
+
+    .language_div{
+        top: 15px;
+        right: 150px;
+    }
+
+    /*Forsiden*/
+    #myVideo {
+        position: static;
+        width: 101%; 
+        max-height: 100%;
+        margin-bottom: 120px;
+        overflow-x: hidden;
+    }
+
+    .f_slides {
+        width: 101%;
+        height: 200px;
+        overflow-x: hidden;
+    }
+
+    .f_instagram {
+        flex-direction: column;
+        width: 101%;
+        overflow-x: hidden;
+        gap: 0px;
+    }
+
+    .instagram-media {
+        max-height: none;
+    }    
+
+    .f_top {
+        margin-bottom: 20px;
+    }
+
+    .f_bot {
+        margin-top: 20px;
+    }
+
+    /*Produkter*/
+    .produkter {
+        min-height: 600px;
+    }
+
+    .produkter_img {
+        max-height: 250px;
+    }
+
+    .card {
+        margin: 25px auto;
+        width: 350px;
+        height: 350px;
+        perspective: 0px;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(0deg);
+    }
+
+    /*Lamper & Møbler*/
+    .toplinks {
+        margin: 10px 30px;
+    }
+
+    .topoverskift {
+        font-size: 35px;
+        margin: 40px 20px;
+        width: 50%;
+    }
+
+    .produkter_grid {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .grid_imgs {
+        height: 300px;
+        padding: 20px 0px;
+        overflow-x: hidden;
+    }
+
+    .prod_txt {
+        width: 95%;
+        font-size: 25px;
+        margin: 40px 20px;
+    }
+
+    .b_line {
+        height: 1px;
+        background-color: black;
+        width: 100%;
+        margin-bottom: 50px;
+        overflow-x: hidden;
+    }
+
+    /*Produktet*/
+    .p_overall {
+        flex-direction: column;
+    }
+
+    .p_left {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .p_slides {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .produktet_top_img {
+        width: 80%;
+        height: auto;
+    }
+
+    .p_billeder {
+        gap: 40px;
+    }
+
+    .column1 {
+        width: 80px;
+    }
+
+    .produktet_bot_img {
+        width: 80px;
+    }
+
+    .Prod_navn {
+        font-size: 40px;
+        margin-top: 25px;
+        margin: 30px 10px;
+    }
+
+    .p_right {
+        width: 80%;
+        margin: 0px;
+    }
+
+    .p_header {
+        padding: 10px 10px;
+    }
+
+    .p_text {
+        width: 100%;
+    }
+
+    .p_question {
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+
+    .p_answer {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    /*hvem er vi*/
+    .h_m {
+        padding: 30px 0px;
+    }
+
+    .h_designersofa, .h_stole, .h_bordogreol, .h_stue, .h_setup {
+        min-height: 300px;
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
+
+    .h_a{
+        width: 85%;
+    }
+
+    .h_kim, .h_morten {
+        margin: 0px auto 50px;
+    }
+
+    .h_v{
+        font-size: 30px;
+        padding: auto;
+    }
+
+    .h_cards {
+        flex-direction: column;
+        margin: 35px 0px 50px;
+    }
+
+    .h_n{
+        font-size: 22px;
+        line-height: 1.5rem;
+    }
+
+    /*Kontakt*/
+    .main_kontakt {
+        flex-direction: column;
+    }
+
+    .gmaps_div {
+        width: 90%;
+        min-height: 200px;
+        padding: 0px;
+    }
+
+    .googlemaps {
+        width: 100%;
+        height: 350px;
+    }
+
+    .nyhed {
+        width: 90%;
+    }
+
+    .nyhed_txt {
+        margin-right: 0px;
+    }
+
+    .kontakt_info {
+        width: 90%;
+        display: block;
+        text-align: center;
+    }
+
+    .margin_tb {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        width: 100%;
+        margin: 40px 0px 20px;
+    }
+
+    .k_txt {
+        overflow-x: hidden;
+    }
+
+    .k_greviews {
+        height: auto;
+        width: 60%;
+    }
+
+    /*FAQ*/
+    .question {
+        width: 85%;
+    }
+
+    .faq_pil {
+        margin: 20px 8px;
+    }    
+
+    .answer {
+        width: 80%;
+    }
+
+    /*404 Error*/
+    .fejlside {
+        max-height: 500px;
+    }
+
+    .fejlbillede {
+        margin: 0px auto;
+    }
+
+    /*Footer*/
+    footer {
+        width: 101%;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+        padding: 50px 0px 20px;
+        margin-top: 30px;
+    }
+    
+    .footer_head {
+        margin-top: 0px;
+    }
+
+    .footer_head {
+        font-size: 1.25rem;
+        justify-content: center;
+    }
+
+    .footer_content {
+        margin: 25px 0px;
+        width: 100%;
+    }
+    
+    .bredde {
+        width: 100%;
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+    
+    .right {
+        margin-left: 0px;
+    }
+    
+    .left {
+        margin-right: 0px;
+    }
+    
+    .footer_links {
+        padding: 7px 0px;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+        
+    .margin10 {
+        display: none;
+    }
+}
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+    
